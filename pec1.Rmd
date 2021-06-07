@@ -1,0 +1,41 @@
+---
+title: "PEC1-ADO"
+author: "Julia Fernandez Reyes"
+date: "18/4/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+## Objetivos
+
+## Materiales y métodos
+
+## Resultados
+Preparamos los datos y realizamos una carga de las librerias que posteriormente se van a usar en el análisis
+
+```{r carga}
+
+```
+
+Cargamos los datos del estudio:
+
+```{r carga1}
+selectSamples<- function (myID){
+  set.seed(myID)
+  selected <- c(sample(1:10, 6),11, sample(12:26, 5), sample(27:36,6))
+  selected <- sort(selected)
+}
+
+mySelected <- selectSamples(1084613)
+targetsAll <-read.csv(file="C:/Users/julia/Documents/MASTER/3 Cuatrimestre/Analisis de Datos Omicos/PEC1/targetsAll.csv", row.names = 1, head=TRUE)
+myTargets <- targetsAll[mySelected,]
+
+myTargets
+```
+
+## Conclusión
